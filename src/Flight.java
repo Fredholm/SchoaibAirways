@@ -53,32 +53,32 @@ public class Flight
     this.price = price;          
   }
   
-  public String getDateAndTime() const
+  public final String getDateAndTime()
   {
     return dateAndTime;
   }
   
-  public int getNrOfTickets() const
+  public final int getNrOfTickets()
   {
     return nrOfTickets;
   }
 
-  public String getDeparture() const
+  public final String getDeparture()
   {
     return departure;
   }
   
-  public String getArrival() const
+  public final String getArrival()
   {
     return arrival;
   }
   
-  public String getFlightID() const
+  public final String getFlightID()
   {
     return flightID;
   }
   
-  public float getPrice() const
+  public final float getPrice()
   {
     return price;
   }
