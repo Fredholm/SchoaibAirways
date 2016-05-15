@@ -1,0 +1,85 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+import javax.swing.JFormattedTextField;
+import javax.swing.JList;
+import javax.swing.JToggleButton;
+import javax.swing.JLabel;
+
+public class PaymentView extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					PaymentView frame = new PaymentView();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public PaymentView() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JFormattedTextField formattedTextField = new JFormattedTextField();
+		formattedTextField.setBounds(160, 35, 167, 20);
+		contentPane.add(formattedTextField);
+
+		JFormattedTextField formattedTextField_1 = new JFormattedTextField();
+		formattedTextField_1.setBounds(160, 76, 167, 20);
+		contentPane.add(formattedTextField_1);
+
+		JFormattedTextField formattedTextField_2 = new JFormattedTextField();
+		formattedTextField_2.setBounds(161, 134, 69, 20);
+		contentPane.add(formattedTextField_2);
+
+		JFormattedTextField formattedTextField_3 = new JFormattedTextField();
+		formattedTextField_3.setBounds(258, 134, 69, 20);
+		contentPane.add(formattedTextField_3);
+
+		JLabel lblMonth = new JLabel("Month");
+		lblMonth.setBounds(175, 121, 46, 14);
+		contentPane.add(lblMonth);
+
+		JLabel lblCardholdersName = new JLabel("Cardholder's Name");
+		lblCardholdersName.setBounds(27, 38, 123, 14);
+		contentPane.add(lblCardholdersName);
+
+		JLabel lblCardNumber = new JLabel("Card Number");
+		lblCardNumber.setBounds(54, 79, 76, 14);
+		contentPane.add(lblCardNumber);
+
+		JLabel lblExpiryDate = new JLabel("Expiry Date");
+		lblExpiryDate.setBounds(61, 137, 69, 14);
+		contentPane.add(lblExpiryDate);
+
+		JLabel lblYear = new JLabel("Year");
+		lblYear.setBounds(273, 121, 46, 14);
+		contentPane.add(lblYear);
+
+		JLabel lblInputPaymentInfo = new JLabel("Input Payment Info");
+		lblInputPaymentInfo.setBounds(190, 11, 107, 14);
+		contentPane.add(lblInputPaymentInfo);
+	}
+}
